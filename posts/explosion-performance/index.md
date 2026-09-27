@@ -63,6 +63,6 @@ date: 2018-04-18
 
 <p>After going through all these optimisations there's still a noticable bump in the frame duration for frames which have an explosion, but it's no longer anywhere near as large as it used to be (it's basically only visible in the profiler) so I'm pretty happy with it at the moment:</p>
 
-<video src="/posts/images/explosion-perf-archived.mp4" controls></video>
+<video src="./explosion-perf-archived.mp4" controls></video>
 
 <i>2026 edit: shout out to the Internet Archive for keeping a copy of the above video, which was originally stored on gfycat and then lost</i>

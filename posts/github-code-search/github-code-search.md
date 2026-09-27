@@ -10,7 +10,7 @@ In particular, github-wide search (the one on the [home page](http://github.com/
 
 So, to take an example from a couple of days ago, I was thinking of changing a method in a shared library called `GetExtendedPropertiesExecutionBlock` and wanted to know where it was used. This is what the search looks like:
 
-![]({{'/posts/images/old-code-search.png' | url}})
+![](./old-code-search.png)
 
 so we can see that this function is only used in one other place.
 
