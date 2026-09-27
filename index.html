@@ -4,8 +4,15 @@ layout: index-layout.html
 
 <h2>blog.nyctef.com</h2>
 
-{% for post in collections.post | reverse %}
-<a href="{{ post.url }}">{{ post.data.title }}</a><br />
-{% if post.date %}
-<span class="small">&nbsp;&nbsp;&nbsp;{{ post.date | date:"%B %d, %Y" }}</span>
-{% endif %} {% endfor %}
+<ul style="list-style-type: none">
+  {% for post in collections.post reversed %}
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }}</a><br />
+    {% if post.date %}
+    <span class="small"
+      >&nbsp;&nbsp;&nbsp;{{ post.date | date:"%B %d, %Y" }}</span
+    >
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

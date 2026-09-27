@@ -9,3 +9,12 @@ to build:
 ```
 npx @11ty/eleventy
 ```
+
+to hide a post:
+
+```
+---
+eleventyExcludeFromCollections: ["post"]
+---
+```
+
