@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  min-height: 100vh;
+
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 100%;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* typography */
+
+h1,
+h2,
+.h1,
+.h2 {
+  font-weight: 400;
+  line-height: 1.25;
+  margin-top: 0.5em;
+}
+
+h1,
+.h1 {
+  font-size: 32px;
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+}
+
+h3,
+.h3 {
+  font-size: 20px;
+}
+
+h1 + h2 {
+  margin-top: 0;
+}
+
+p,
+ul,
+ol {
+  margin-top: 1em;
+}
+
+@media screen and (min-width: 480px) {
+  h1,
+  .h1 {
+    font-size: 48px;
+  }
+  h2,
+  .h2 {
+    font-size: 32px;
+  }
+  h3,
+  .h3 {
+    font-size: 24px;
+  }
+  p,
+  .p,
+  ul,
+  ol {
+    font-size: 20px;
+  }
+  small,
+  .small {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  h1,
+  .h1 {
+    font-size: 64px;
+  }
+  h2,
+  .h2 {
+    font-size: 48px;
+  }
+  h3,
+  .h3 {
+    font-size: 32px;
+  }
+}
+
+p,
+.p,
+ul,
+ol {
+  font-size: 18px;
+}
+
+small,
+.small {
+  font-size: 14px;
+}
+
+strong,
+.strong {
+  font-weight: 700;
+}
+
+/* page sections */
+
+#page {
+  max-width: 700px;
+  width: 100%;
+  display: block;
+}
+
+/* links and decoration */
+
+a {
+  color: #09b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* misc */
+
+img {
+  max-width: 100%;
+  height: auto;
+}

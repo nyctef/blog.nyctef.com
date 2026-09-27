@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>nyctef</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+
+    <link
+      href="http://fonts.googleapis.com/css?family=Gentium+Book+Basic"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div id="page">
+      <h2>{{title}}</h2>
+      <a href="/">« back</a>
+      <p class="small">
+        {% if date %} {{date | date:"%B %d, %Y"}} {% endif %} {% if date and
+        original %}|{% endif %} {% if original %} Originally published at
+        <a href="{{original}}">{{original}}</a>
+      </p>
+      {% endif %}
+      <main>{{content}}</main>
+    </div>
+  </body>
+</html>
