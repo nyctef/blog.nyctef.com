@@ -133,3 +133,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+code.block {
+  display: block;
+  white-space: pre-wrap;
+}
