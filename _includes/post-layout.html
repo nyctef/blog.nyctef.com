@@ -17,7 +17,19 @@
       <p class="small">
         {% if date %} {{date | date:"%B %d, %Y"}} {% endif %} {% if date and
         original %}|{% endif %} {% if original %} Originally published at
-        <a href="{{original}}">{{original}}</a>
+        <a href="{{original}}"
+          ><span
+            style="
+              display: inline-block;
+              max-width: 300px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              vertical-align: bottom;
+            "
+            >{{original}}</span
+          ></a
+        >
       </p>
       {% endif %}
       <main>{{content}}</main>
