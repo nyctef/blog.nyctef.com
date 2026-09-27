@@ -71,7 +71,9 @@ ol {
     font-size: 20px;
   }
   small,
-  .small {
+  .small,
+  figcaption,
+  figcaption p {
     font-size: 16px;
   }
 }
@@ -99,7 +101,9 @@ ol {
 }
 
 small,
-.small {
+.small,
+figcaption,
+figcaption p {
   font-size: 14px;
 }
 

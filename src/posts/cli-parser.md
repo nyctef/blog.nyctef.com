@@ -4,9 +4,16 @@ original: https://medium.com/ingeniouslysimple/building-a-cli-parser-from-scratc
 date: 2020-06-20
 ---
 
+<figure>
+
 ![](https://cdn-images-1.medium.com/max/800/0*tCj9PSP75LoR96HP.png)
 
+<figcaption>
+
 [https://xkcd.com/1692/](https://xkcd.com/1692/)
+
+</figcaption>
+</figure>
 
 There are plenty of CLI parser libraries out there for pretty much every programming language under the sun. However, sometimes you might not find one with the right combination of features you want, or maybe you just want to understand what makes them tick. Building a CLI parser is probably much easier than you think!
 
