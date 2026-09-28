@@ -6,7 +6,7 @@ date: 2020-06-20
 
 <figure>
 
-![](./0-tCj9PSP75LoR96HP.png)
+![](./xkcd-1692.png)
 
 <figcaption>
 

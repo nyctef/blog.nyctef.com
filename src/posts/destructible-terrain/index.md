@@ -4,7 +4,7 @@ original: https://blog.nyctef.com/post/172698234132/building-destructible-worms-
 date: 2018-04-07
 ---
 
-![image](./tumblr_inline_p6txnp4AOh1s8ktyn_540.gif)
+![image](./in-editor.gif)
 
 Code for [unreal](https://github.com/nyctef/unreal-playground/blob/110f74cbaa43da67f74de7037d60092e22654d0e/UETut_2DSideScroll_1/Source/UETut_2DSideScroll_1/TerrainMesh.cpp) and [unity](https://github.com/nyctef/unity-playground/blob/1babb8e22f1a87e1176010167b8cb9df707f60d2/worms-map-generation-tests/Assets/Scripts/MapGeneration/WavyIslandMapGenerator.cs) on github
 
@@ -18,10 +18,10 @@ The collision mesh is generated with a marching squares implementation based on 
 
 Here’s the generation working on a larger scale: as you can see it could probably do with a bit more smoothing (or mayber a larger amount of smoothing on each pass)
 
-![image](./tumblr_inline_p6tyvaNott1s8ktyn_540.gif)
+![image](./larger.gif)
 
 And here’s what the collision mesh ends up looking like:
 
-![image](./tumblr_inline_p6tz1cI9bE1s8ktyn_540.png)
+![image](./collision-mesh.png)
 
 Probably the most fiddly part of the whole thing was making sure all the triangles in the 16 different marching squares cases were ordered correctly (clockwise for unity, anticlockwise for unreal IIRC) but once that was out of the way then the mesh behaved pretty well

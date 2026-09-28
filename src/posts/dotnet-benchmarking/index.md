@@ -29,7 +29,7 @@ Adding the `--console-app` option creates a `Program.cs` entrypoint so we can ru
 
 At this point we’d normally write the benchmark code into the newly-created `Benchmarks.cs` file. However, it’s fun to see what happens if we try to benchmark nothing at all:
 
-![](./1-3kpuYTFCge435ECZgmxN-A.png)
+![](./benchmark-empty-method.png)
 
 Summary results after running a couple of empty benchmarks
 
@@ -71,7 +71,7 @@ By passing the commandline arguments into BenchmarkDotNet, we can easily configu
 
 Next, we run the benchmarks with the `--profiler EP` option to enable [the Event Pipe profiler](https://benchmarkdotnet.org/articles/features/event-pipe-profiler.html). The summary results should now include the path of an exported file that [speedscope.app](https://www.speedscope.app/) can analyze. The results look something like this:
 
-![](./1-ygD-ZBWe8bcnT0p9LyggZg.png)
+![](./speedscope.png)
 
 This format is called a “flame graph,” and it’s incredibly useful for visualizing how much time is spent in different areas of the code. The horizontal axis shows the total time for one of BenchmarkDotNet’s iterations (which may include multiple copies of the benchmark itself: BenchmarkDotNet often unrolls loops to make the results more accurate). The vertical axis shows the stack trace across many different CPU samples over time, and groups the results together by method.
 
@@ -81,7 +81,7 @@ The profilers available in BenchmarkDotNet are what’s known as “sampling pro
 
 Other kinds of profilers, like JetBrains’ dotTrace and Redgate’s ANTS, are known as “instrumenting profilers.” They can add instrumentation to the beginning and end of every method to track when they are being called. This instrumentation can produce less realistic benchmarks, since the profiler often disables method inlining and the extra instrumentation adds a lot of overhead to small methods. However, instrumenting profilers can gather a lot of detail that sampling profilers are unable to pick up on.
 
-![](./1-v0CKpb4IJQVgcXR5OoeN_w.png)
+![](./ants-profiler.png)
 
 A screenshot of ANTS Performance Profiler, showing hit counts for different methods (disclaimer: I used to work on this product :)
 
@@ -97,6 +97,6 @@ To sum up:
 
 I hope that’s helpful! Now go forth and make some code fast :)
 
-![](./1-5js61XSXb5Kp7ie6f_3KkA.png)
+![](./plane-model.png)
 
 Photo by [Tusik Only](https://unsplash.com/@tusik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

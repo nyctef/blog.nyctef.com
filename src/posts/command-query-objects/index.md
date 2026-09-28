@@ -14,7 +14,7 @@ Some time later, I realized I need to store lists of objects. I briefly consider
 
 Fast-forward to today. The upshot of this process is that I had core logic code which depended on an `IListPersistenceApi<T>` interface, which could load and save lists of arbitrary objects. This all worked pretty well: the implementing code was simple enough, and mocking the interface for unit tests was easy too.
 
-![](./1-Yo1asFfHISvcBo03iI-NPQ.jpeg)
+![](./monkeys.jpeg)
 
 Photo by [Chris Tweten](https://unsplash.com/@ctwtn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 

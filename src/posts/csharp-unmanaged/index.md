@@ -95,6 +95,6 @@ This is a highly contextual decision. With other types of unmanaged objects this
 
 Hopefully this has been a useful example of how the .NET GC works and how to write code that works with it. If you have any questions or suggestions for things to explain better (or corrections!) then feel free to post a response!
 
-![Four garbage bins in a street.](./1-Du4tsqFLsPihw1hPY71YDA.jpeg)
+![Four garbage bins in a street.](./bins.jpeg)
 
 Photo by [Paweł Czerwiński](https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
