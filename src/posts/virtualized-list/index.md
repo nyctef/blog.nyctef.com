@@ -12,13 +12,13 @@ We ran into the latter case last week: we needed to try and add virtualization t
 
 In this article I’ll show how to build a simple scrollable virtualized list in React, but the basic technique should be applicable to any UI framework.
 
-![](./1-qD-MI5lWidzhFYTbwgWclA.png)
+![](./virtualized-list.png)
 
 We’re rendering thousands of elements, but we only need four elements (2048–2051) for this UI to look correct!
 
 I’ve set up some examples at [nyctef.github.io/virtualized-list-examples](https://nyctef.github.io/virtualized-list-examples) where you can play around with different versions and see the source code for each implementation. The 1,000 element case renders reasonably well on my work machine — if you want to see some slowdown, you may want to change the number of elements to 10,000 or enable CPU throttling in Chrome:
 
-![](./1-mboBbIMhaYqKF_99nhNFHA.png)
+![](./chrome-cpu-throttle.png)
 
 Enabling CPU throttling in Chrome devtools is great for demonstrating potential performance problems while not eating all your machine’s resources.
 
@@ -32,7 +32,7 @@ We could wrap each item in a new div to give it the right `position` and `top` v
 
 Now we have a list of items we need to display. We have the index of each item, and we know how tall the items are. We need to calculate the indexes of the items which should be visible. For that, we’ll need three bits of information:
 
-![Diagram showing how the inner height, window height and scrollTop relate to each other.](./1-SQzqlpFuP0zPxpvpYXYWRg.png)
+![Diagram showing how the inner height, window height and scrollTop relate to each other.](./list-measurements.png)
 
 The **“inner” height** is the total height of the list itself. In our simple case, it’s the item height multiplied by the number of items.  
 The **“window” height** is the height of the scrollable area: a window into the full list. This height will depend on the surrounding elements. For now it’s easiest to hardcode it to a specific value; we can look into ways of calculating it later.  

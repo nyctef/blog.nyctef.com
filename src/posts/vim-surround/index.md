@@ -71,4 +71,4 @@ I hoped that helped!
 
 _If you want to write React code, have you considered_ [_looking at a job at Redgate_](http://bit.ly/3t1Lp9o)_? We’ve got more and more teams using React, and we’re committed to supporting remote working through 2021. I’m sure we’d love to have you aboard!_
 
-![](./0-DNUCFe1E1yayU4Py.png)
+![](./code.png)

@@ -4,7 +4,7 @@ original: https://medium.com/ingeniouslysimple/should-you-refactor-test-code-b95
 date: 2019-06-27
 ---
 
-![](./1-ru3IA76ZZZYDjUY5-JpFqA.png)
+![](./code.png)
 
 Test code is a different beast than non-test code. We generally want our tests to be extremely simple and easy to read: if they’re not, then we have much less confidence that the tests are correct, nevermind the underlying code that they’re actually testing! (Have you ever written tests for your tests?)
 

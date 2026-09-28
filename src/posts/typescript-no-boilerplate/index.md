@@ -168,4 +168,4 @@ Finally, we say that if the type matches then the result of the conditional type
 
 The upshot of all this type magic is that we no longer need to keep a separate interface and implementation in sync for any code which depends on `Api`. As soon as `createApi` returns a new property on the api object, typescript will verify that `MockApi` matches the new type and ensure that our tests keep behaving. We’ve gained a whole lot of type checking power with very little boilerplate compared to the native JS code.
 
-![](./1-N0cmeZdn8tzdevdjEwPU5A.png)
+![](./typescript-magic.png)

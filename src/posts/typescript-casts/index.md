@@ -99,6 +99,13 @@ So when should you use type assertions? I’d say the answer is **as little as p
 
 So, to sum up: typescript type assertions may be more dangerous than you may think, and you should avoid them if possible. But sometimes they turn out to be necessary! The important thing, as always, is to be properly informed about how they work and to make deliberate decisions when writing code.
 
-![](./1-cbPu9oGHe1sGSdO9rM8eKw.png)
+<figure>
+
+![](./cast.png)
+
+<figcaption>
 
 Original photo by [Tom Claes](https://unsplash.com/@tomspentys?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/cast?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+</figcaption>
+</figure>

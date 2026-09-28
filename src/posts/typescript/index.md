@@ -4,7 +4,7 @@ original: https://medium.com/ingeniouslysimple/typescript-or-how-i-learned-to-st
 date: 2018-09-17
 ---
 
-![](./1-ddF_QFJmaK99SoS1bve_EQ.png)
+![](./cat-or-dog.png)
 
 For most of my programming career so far I’ve been using C# and working on desktop tools, and only dipping into more dynamic languages like javascript or python for fun hobby projects. That all changed recently when I started working on a new tool with a web UI (albeit hosted in electron for the moment) and a whole new bag of technologies. Some felt kinda familiar — React is a lot like WPF except without the two-way binding, which is an improvement, and Redux feels like [the logical conclusion](https://www.youtube.com/watch?v=yTkzNHF6rMs) to a growing love of functional programming that I’d been developing over the years — but typescript caught me by surprise a little.
 

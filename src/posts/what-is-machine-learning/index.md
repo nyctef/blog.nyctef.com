@@ -10,9 +10,16 @@ However, some problems are too difficult for a human to just write down a progra
 
 Instead of trying to write down a program and put it into the computer directly, we can try to give the computer tools to figure out its own program. We’ll provide the computer with hundreds or thousands of examples of correct input and output, and get the computer to figure out the rules in the middle that transform one into the other. This is the process that ‘machine learning’ generally refers to.
 
-![](./1-wUZiI2Mg2cncuMWWXIiBgQ.png)
+<figure>
+
+![](./xkcd-1425.png)
+
+<figcaption>
 
 “In the 60s, Marvin Minsky assigned a couple of undergrads to spend the summer programming a computer to use a camera to identify objects in a scene. He figured they’d have the problem solved by the end of the summer. Half a century later, we’re still working on it.” [xkcd.com/1425](https://xkcd.com/1425/)
+
+</figcaption>
+</figure>
 
 ### What is machine learning good for?
 
@@ -20,9 +27,12 @@ One of the biggest differences between machine learning and regular programming 
 
 The most well-known applications of machine learning are interpreting images (computer vision), sound (speech recognition) and text (natural language processing) — trying to take fuzzy, real-world information and translate it into a form that can be more easily handled by other computer programs.
 
-![](./1-SxFykyzLzQE87HLdMvo97g.png)
+<figure>
 
-A sample of handwritten digits from the MNIST dataset. The best machine learning programs for recognizing these digits get around 0.2–0.3% error rates — not perfect, but very close.
+![](./mnist.png)
+
+<figcaption>A sample of handwritten digits from the MNIST dataset. The best machine learning programs for recognizing these digits get around 0.2–0.3% error rates — not perfect, but very close.</figcaption>
+</figure>
 
 ### What resources are available?
 
@@ -39,8 +49,15 @@ Both courses are a mix of video lectures, quizzes and programming assignments wh
 
 Of course, this is just a tiny fragment of what’s available and I’m far from an expert in any of this stuff. However, I hope this was interesting and possibly inspired you to think more about what you could do with machine learning in the future.
 
-![](./1-mVZaF2cbTtbrQf_Uhy_8-Q.png)
+<figure>
+
+![](./horse-zebra.png)
+
+<figcaption>
 
 Above: a photo of a horse  
 Below: a ML-generated zebra  
 Source: [github.com/junyanz/CycleGAN](https://github.com/junyanz/CycleGAN)
+
+</figcaption>
+</figure>
