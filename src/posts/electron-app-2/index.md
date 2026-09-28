@@ -36,7 +36,7 @@ Since electron is running from `out/electron/index.js`, we load `index.html` rel
 
 And a quick `npm run start` shows off the new content:
 
-![](./1-1t6ugk4tpuv4w7gExR0TLA.png)
+![](./hello-world-1.png)
 
 Not very impressive, I’ll admit. Let’s make it a bit more interactive:
 
@@ -286,11 +286,11 @@ As a side note, webpack also has a `--watch` parameter, so our `build:watch` scr
 
 And after all that effort:
 
-![](./1-g5tTk6e9bHjTamTj-JZktQ.png)
+![](./loading.png)
 
 For a moment…
 
-![](./1-Owxji-N9b3BvSJIu8f-VMA.png)
+![](./hello-world-2.png)
 
 Hello world, indeed.
 

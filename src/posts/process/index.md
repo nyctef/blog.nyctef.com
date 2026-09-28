@@ -29,6 +29,13 @@ Process needs to be relevant, appropriate and deliberate: for example, requiring
 
 Getting there is the hard part :)
 
-![](./0-NLefZxFJVfcA4M8q.jpg)
+<figure>
+
+![](./flowchart.jpg)
+
+<figcaption>
 
 [Photo by Kelly Sikkema](https://unsplash.com/photos/lFtttcsx5Vk)
+
+</figcaption>
+</figure>

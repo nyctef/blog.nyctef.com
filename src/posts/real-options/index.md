@@ -48,9 +48,12 @@ Also, ask yourself if the change will get easier or harder over time:
 - How hard will it be to do this change now?
 - How hard will it be to do this change in a year’s time?
 
-![](./1-NI2XsA7zCTyAb6OsyJA2Ng.png)
+<figure>
 
-Because every good idea needs a 2x2 matrix
+![](./two-by-two.png)
+
+<figcaption>Because every good idea needs a 2x2 matrix</figcaption>
+</figure>
 
 If a change is easy now and will stay easy later, you can put it off: this is a deferrable decision.
 

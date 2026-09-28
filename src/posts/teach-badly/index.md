@@ -4,9 +4,12 @@ original: https://medium.com/ingeniouslysimple/how-to-teach-things-badly-e2c4bce
 date: 2021-04-27
 ---
 
-![A chessboard showing various pawn moves, explained in image caption.](./1-9IEsR5rzJdCrJ44m07rWEw.png)
+<figure>
 
-<small>A quick primer on pawns. Pawns generally move forwards one square at a time, with two exceptions: their first move can be two squares, and they can capture opposing pieces by moving one square diagonally.</small>
+![A chessboard showing various pawn moves, explained in image caption.](./pawn-moves.png)
+
+<figcaption>A quick primer on pawns. Pawns generally move forwards one square at a time, with two exceptions: their first move can be two squares, and they can capture opposing pieces by moving one square diagonally.</figcaption>
+</figure>
 
 Today’s idea isn’t directly technical, but by the end it should hopefully be clear how it can apply to programming and software development in general.
 
@@ -47,4 +50,4 @@ Teaching _why_ something is a particular way is often more important than teachi
 
 Of course, the rules for chess are unlikely to change any time soon. But when working on software (or many other fields) we come into contact daily with decisions, architectures or design patterns that impose similar kinds of rules. Knowing the context for these rules — especially the original goals that the rules were supposed to implement — [allows us](https://en.wikipedia.org/wiki/G._K._Chesterton#Chesterton%27s_fence) to be much more _deliberate_ when making decisions.
 
-![Diagram of a chessboard with an en passant move highlighted](./1-DU9JtqtZ66PBwP2Own-UQw.png)
+![Diagram of a chessboard with an en passant move highlighted](./en-passant.png)

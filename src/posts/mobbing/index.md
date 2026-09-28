@@ -10,7 +10,7 @@ Our main task this month has been to work through a couple of technical spikes. 
 
 With that context, we’ve been using mob programming across the team for pretty much the entire month, and it’s been working really well.
 
-![](./1-D9Ue7S6VHkJDUfh4LUgbwQ.png)
+![](./orca-team.png)
 
 The new Orca team around a single computer.
 
@@ -35,7 +35,7 @@ So far, mob programming has been incredibly helpful to spread knowledge across t
 
 It’s worth noting that like pair programming, being in a mob is hard work — and can be much more tiring than working alone. Instead of relaxing into some kind of flow state, we’re constantly thinking and talking about what’s going on. This is part of the reason that mob programming can be so effective, but taking regular breaks and rotating drivers is important to ease some of the load.
 
-![](./1-sX7vBc1dVFHyhGEYxwYDhw.png)
+![](./flowchart.png)
 
 A decision tree we came up with for deciding how to approach work
 

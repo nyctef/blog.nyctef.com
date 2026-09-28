@@ -164,6 +164,13 @@ Anyway, the upshot is that we now only have to define our string once, and we’
 
 This is just one use I’ve found for custom interpolated string handlers in C# — I’m sure there are many more! I’d love to hear about any cool examples you might come up with.
 
-![](./1-Mj-Q5PFg8GajHCNA6Y0o8g.png)
+<figure>
+
+![](./good-dog.png)
+
+<figcaption>
 
 Photo by [Alexander Naglestad](https://unsplash.com/@alexandernaglestad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+</figcaption>
+</figure>

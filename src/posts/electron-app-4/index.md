@@ -136,6 +136,6 @@ There’s some more error handling needed for this code for it to be properly so
 
 Overall it’s still early days, but JSON-RPC appears to be working well for us so far. The simplicity of the protocol and its implementation is definitely appreciated and it works fully cross-platform.
 
-![](./1-Nr23fWQ0okMdaIwLcwzY3Q.jpeg)
+![](./electron.jpeg)
 
 Photo by [israel palacio](https://unsplash.com/@othentikisra?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

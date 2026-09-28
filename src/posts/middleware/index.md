@@ -12,27 +12,27 @@ The most common place this pattern appears is in handling web requests — w
 
 We need to have some default case for our pipeline. In the web request example, if we have no idea how to handle a request, then we just return a 404:
 
-![](./1-VJyL2GfSNeKs_49PNcGBcA.png)
+![](./404-diagram.png)
 
-![](./1-ztaeSSA9mRL2tQZnq1zhxg.png)
+![](./404-code.png)
 
 We’ll add a web handler that knows how to handle some URLs, but passes others down the pipeline:
 
-![](./1-lCDSth13FXEYzreATk9-LA.png)
+![](./www.png)
 
 We can compose this with an API handler which knows how to handle `/api` requests:
 
-![](./1-It-u-mlhjuq_6o1Ypvjncg.png)
+![](./api.png)
 
 We might want to add a caching layer. This shows how we can modify the request and response objects as they move up and down the pipeline:
 
-![](./1-BSQ1s0kssSWEYdQjt9WXDw.png)
+![](./cache.png)
 
 (Obviously this isn’t an example of real code, but vaguely suggests how a caching layer like this might work :)
 
 We don’t have to directly modify the request and response — we can also cause other side-effects at the right point in the pipeline:
 
-![](./1-mfSHfl9jWmg9CKp42zsccQ.png)
+![](./transaction.png)
 
 The important thing we’ve seen so far is that each piece of middleware we’ve built can consider the rest of the pipeline as a black box, and generally act independently of every other piece of middleware. There can be some loose coupling, however, since middleware often relies on being ordered in a certain way — for example, our caching layer probably assumes that it’s somewhere near the front of the pipeline.
 
@@ -56,7 +56,7 @@ This is another problem which turns out to be suitable for a similar pipeline st
 
 Interestingly, most of our standard middlewares in this case differ from the web request middlewares above. For web requests, the standard pattern is that we’ll either handle the request entirely, or delegate down the pipeline. When we’re creating masking steps, however, most middlewares handle some of the request but delegate the rest to whatever’s next in the pipeline — the two results are then concatenated before continuing.
 
-![](./1-_2N5r1RmPOiBn43FDgS3jg.png)
+![](./middleware-and-pipelines.png)
 
 Pipelines with middleware are a very powerful tool, but they aren’t without downsides. One source of confusion I’ve found is that the order of execution isn’t very clear or intuitive, because execution happens both forwards and backwards across all the middleware functions. This can be a problem when the list of middlewares is defined somewhere in code — it can be easy to assume that this order is the same order that the middleware will execute in.
 
@@ -68,20 +68,30 @@ It’s important to realize whether you actually need the middleware pattern or 
 
 The most basic alternative is just chaining a series of functions together — where those functions can be of the form `input->output`, `output->output` or (less commonly) `input->input`.
 
-![](./1-V83CpOKublGI_X38_V7xaA.png)
+<figure>
 
-A simpler function chain, where the first function implements the basic transformation and then additional functions apply optimizations to the output type.
+![](./function-chain.png)
+
+<figcaption>A simpler function chain, where the first function implements the basic transformation and then additional functions apply optimizations to the output type.</figcaption>
+
+</figure>
 
 Another downside of the middleware model is that it locks you into using the same input and output type across the entire pipeline, while a simpler chain of functions allows changing the type multiple times. Interestingly, both OWIN and expressjs work around this problem in their own ways — OWIN passes an untyped dictionary through each middleware which arbitrary properties can be attached to, and expressjs works in javascript, so arbitrary properties can be attached to the `req` and `res` objects as required.
 
-![](./1-9s8xnRQS2tQr0rf71GMyzA.png)
+<figure>
 
-Multiple type changes can happen in a simpler function chain.
+![](./type-changes.png)
+
+<figcaption>Multiple type changes can happen in a simpler function chain.</figcaption>
+</figure>
 
 You may find that you still need to reference the input values in some of the subsequent `output->output` steps. If you never actually modify the input, then you can chain a bunch of `(input, output)->output` functions together:
 
-![](./1-sB8vdUXeuQHUIJtIRPD2pA.png)
+<figure>
 
-A function chain where the input values are always available to reference (but cannot be modified)
+![](./input-inject.png)
+
+<figcaption>A function chain where the input values are always available to reference (but cannot be modified)</figcaption>
+</figure>
 
 In the end, of course, it’s just a matter of picking the right tool for the job.

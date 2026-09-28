@@ -26,9 +26,12 @@ Putting constraints on the programmer is possibly the most important design task
 
 The first task is to pick a language that imposes type constraints on the code: [typescript is great](https://medium.com/ingeniouslysimple/deebe44c8794), something like C# or Go is usefully boring, and I keep telling myself I’ll learn Haskell or Rust one of these days.
 
-![“You were so preoccupied with whether or not you could, you didn’t stop to think if you should” [Jurassic Park, paraphrased]](https://cdn-images-1.medium.com/max/800/0*G0-AlRTVNIDUCqhd.jpg)
+<figure>
 
-Me to myself after another jenga-like inheritance hierarchy or crazy nested function-producing-function function.
+![“You were so preoccupied with whether or not you could, you didn’t stop to think if you should” [Jurassic Park, paraphrased]](./preoccupied.jpg)
+
+<figcaption>Me to myself after another jenga-like inheritance hierarchy or crazy nested function-producing-function function.</figcaption>
+</figure>
 
 Beyond language choice, language constraints are almost always going to be some self-imposed _artificial_ limitation. Sticking to these constraints when writing code (such as creating immutable objects or avoiding inheritance) can produce a simpler solution by _limiting sources of complexity_.
 
@@ -68,7 +71,7 @@ In [a previous article](https://medium.com/p/237cfc850752) I mentioned something
 
 The biggest problem with “naive” OO is that core domain objects (often `User` end up with dozens of responsibilities and piles of code unless special effort is made to pull responsibilities away.
 
-![](./1-37nudw5YFzaQOo3RYcKrZA.png)
+![](./the-matrix.png)
 
 Rust is an example of a language that encourages splitting data types and the operations on them: using traits you can neatly implement custom behaviors for data types you don’t own.
 

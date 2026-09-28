@@ -4,7 +4,7 @@ original: https://medium.com/ingeniouslysimple/how-many-programmers-does-it-take
 date: 2019-04-29
 ---
 
-![](./1-_i6h5jG-hcjoloPBvQ2Ccg.png)
+![](./ssh-docker-lightbulb.png)
 
 Over the past few days I’ve been playing around with code to automate the “smart” light bulb that I’ve recently acquired. This was partly motivated by a desire to try something a bit different from the usual app development, but mostly because my phone died and I needed a different way to control it for a while! (Of course, just using the official Windows app would be too easy ;)
 
@@ -22,7 +22,7 @@ The upshot is that I was now able to use Wireshark to compare network traffic fr
 
 Initially everything looked correct:
 
-![](./1-Wkx9lkMZ6eN2QQirulO9qg.png)
+![](./wireshark.png)
 
 A Wireshark capture, filtered to only show LIFX packets. You can see how different network layers and sections of the LIFX LAN protocol map onto bytes in the actual packet.
 

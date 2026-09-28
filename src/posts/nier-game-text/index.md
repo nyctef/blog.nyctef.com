@@ -4,7 +4,7 @@ original: https://blog.nyctef.com/post/177095363702/extracting-game-text-from-ni
 date: 2018-08-17
 ---
 
-![](./tumblr_inline_pdlzodB6kl1s8ktyn_540.png)
+![](./nier-automata.png)
 
 Recently I’ve been playing through Nier:Automata again, and trying to stick to Japanese for more of the playthrough. This is a bit of a challenge since my level of Japanese comprehension is still roughly about that of a two-year-old baby. I ended up taking a lot of screenshots like the one above and then [figuring out how to translate them](https://jisho.org/search/%E6%B0%97%E5%88%86%E3%81%8C%E8%89%AF%E3%81%8F%E3%81%A6%E3%82%82%E8%89%AF%E3%81%8F%E3%81%AA%E3%81%8F%E3%81%A6%E3%82%82%E3%80%81%E4%BD%9C%E6%88%A6%E3%81%AB%E3%81%AF%E9%96%A2%E4%BF%82%E3%81%AA%E3%81%84%E3%80%82) after the fact.
 

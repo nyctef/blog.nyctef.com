@@ -49,6 +49,13 @@ And finally, sometimes names are just too small to be meaningful. This seems to 
 
 Hopefully this has been a set of interesting ideas. The main thing I’ve learned from writing this down is the continued importance of **being deliberate** rather than only following rules. Be as meaningful as possible when writing code most of the time, but always be aware of those cases where you might need to communicate a lack of meaning.
 
-![](./1-KA_UQSn9M3mQMPCp74fPlA.jpeg)
+<figure>
+
+![](./mountains.jpeg)
+
+<figcaption>
 
 Photo by [Lucian Dachman](https://unsplash.com/@luciandachman?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText). It doesn’t mean anything.
+
+</figcaption>
+<figure>

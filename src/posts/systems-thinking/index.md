@@ -4,7 +4,7 @@ original: https://medium.com/ingeniouslysimple/nor-dev-con-and-thinking-in-syste
 date: 2019-05-31
 ---
 
-![](./1-U4vXuRmJ5VyVpuZamxUeLQ.png)
+![](./thinking-in-systems.png)
 
 A few months ago, a group of Redgaters went to nor(dev):con — a tech conference in Norwich, full of interesting talks. I happened to be reading Donella Meadows’ excellent book _Thinking in Systems: A Primer_ on the train: since then I’ve been thinking on and off about systems thinking and how it might be applied to some of the talks we saw during the day.
 
@@ -16,19 +16,29 @@ Systems thinkers often model systems as structures of **stocks** and **flows**. 
 
 To provide an example from the book, imagine a simple bathtub with a tap providing water, and a drain removing it:
 
-![](./1-EXlL6Jvc1tHfdYVNVuEs8g.png)
+<figure>
+
+![](./bathtub.png)
+
+</figure>
 
 We can abstract this into a diagram showing the stock (the amount of water in the bathtub) and the two flows which increase or decrease the amount of water:
 
-![](./1-H-0ruYozapS7teqRWkVCsQ.png)
+<figure>
 
-A stocks-and-flows diagram for the bathtub. The rectangle represents the water level and arrows represent flows. The “faucets” on each flow control the amount of the flow. The clouds at either end abstract hide away some other system that we don’t care about — all systems are interconnected!
+![](./bathtub-stock.png)
+
+<figcaption>A stocks-and-flows diagram for the bathtub. The rectangle represents the water level and arrows represent flows. The “faucets” on each flow control the amount of the flow. The clouds at either end abstract hide away some other system that we don’t care about — all systems are interconnected!</figcaption>
+</figure>
 
 We can also model the system over time by graphing the level of the stock:
 
-![](./1-h8_sIpZKLZy69lHSUpckOg.png)
+<figure>
 
-Three possible graphs for the water level stock (w) over time (t). In the first case, the water is drained faster than it is being supplied, so the stock level decreases. The second graph shows an equilibrium case: both flows match (they might or might not be stopped). In the third graph, the bathtub fills until it starts to overflow.
+![](./bathtub-stock-graph.png)
+
+<figcaption>Three possible graphs for the water level stock (w) over time (t). In the first case, the water is drained faster than it is being supplied, so the stock level decreases. The second graph shows an equilibrium case: both flows match (they might or might not be stopped). In the third graph, the bathtub fills until it starts to overflow.</figcaption>
+</figure>
 
 In the third graph, the input from the tap dominates the output from the sink, so the level of water steadily rises — until a new behavior emerges and the water overflows! Interesting systems tend to exhibit surprising, nonlinear behavior.
 
@@ -50,15 +60,21 @@ These different domains in Cynefin describe how much we know about the system. O
 
 Liz gave an example of a complicated system: a team of devs who had a problem with bugs, so they started tracking reported bug count as a metric and tried to push it down.
 
-![](./1-s1si-IrD3m7b6ITlACDEjg.png)
+<figure>
 
-A very simple model for fixing bugs. The arrows with circles show feedback mechanisms: here the amount of bugs in the code affects how much effort is put into bug fixing, which should in turn affect the flow from “bugs” to “fixed bugs”.
+![](./bugs-stock.png)
+
+<figcaption>A very simple model for fixing bugs. The arrows with circles show feedback mechanisms: here the amount of bugs in the code affects how much effort is put into bug fixing, which should in turn affect the flow from “bugs” to “fixed bugs”.</figcaption>
+</figure>
 
 This succeeded for a while, but after doubling down on bugfixing effort, **the number of bugs went up!** Rather than any obvious metric failures or drops in quality, it turns out users had noticed bugfixes going on, and started reporting more bugs — the newly-reported bugs had been there from the start.
 
-![](./1-riWsWhHdEJQaJRH36Wa_JA.png)
+<figure>
 
-A slightly more complete model for fixing bugs. Only known bugs can be fixed, and how many bugs are fixed affects customer goodwill. When customers have trust in the developers, the number of known bugs will increase as customers report more bugs.
+![](./bugs-stock-2.png)
+
+<figcaption>A slightly more complete model for fixing bugs. Only known bugs can be fixed, and how many bugs are fixed affects customer goodwill. When customers have trust in the developers, the number of known bugs will increase as customers report more bugs.</figcaption>
+</figure>
 
 ---
 
@@ -66,13 +82,16 @@ Later in the day, Jon Jagger’s Miscellaneous Process Tips talk provided an ano
 
 After eating a donut, for example, the body receives an influx of sugar. Beta cells in the pancreas react to the higher blood glucose levels by emitting insulin. This insulin causes organs to consume more glucose, and the liver to store excess glucose as glycogen. The effect is a feedback loop which balances out increases in blood sugar. An opposing feedback loop happens when glucose levels are too low: alpha cells producing glucagon cause stored glycogen to be turned back into glucose.
 
-![](./1-qDxakMZ8A2HrQVhaVMgKEA.png)
+<figure>
 
-A basic diagram of blood sugar regulation, showing how glucagon levels and insulin levels affect the flow of glucose into the blood. We could add more detail by treating glucagon and insulin as their own stocks, and modelling more of the system that way.
+![](./glucose-stock.png)
+
+<figcaption>A basic diagram of blood sugar regulation, showing how glucagon levels and insulin levels affect the flow of glucose into the blood. We could add more detail by treating glucagon and insulin as their own stocks, and modelling more of the system that way.</figcaption>
+</figure>
 
 Jon talked about how so often stability is the result of two processes furiously working to oppose each other. The idea of stability built on top of activity may seem unintuitive, but often there has to be [some correcting mechanism](https://en.wikipedia.org/wiki/Le_Chatelier%27s_principle) or any equilibrium will be unstable: stable systems oppose their own function.
 
-![](./1-GZZV0Z40YxkxILdiP37yyQ.png)
+![](./correcting-graph.png)
 
 Systems thinking can potentially explain problems with change management as well. In his talk, Jon explained how a naive manager might treat introducing some technique or tool as a lever that just works linearly: pushing the lever more and more results in higher productivity. But thinking back to our bathtub example with the nonlinearity when the overflow happened, or realising that people and companies are incredibly complex systems with many feedback and reinforcing loops: these help us realise how basic, sensible intuitions about our work can cause serious problems down the line.
 

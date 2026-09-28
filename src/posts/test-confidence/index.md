@@ -4,15 +4,22 @@ original: https://medium.com/ingeniouslysimple/testing-and-the-confidence-pyrami
 date: 2019-02-21
 ---
 
-![](./0-IWm666YkWoYoTUQU.jpg)
+![](./bladerunner.jpg)
 
 ### Testing and the confidence pyramid
 
 Much has been written about the classical test pyramid. The basic idea is straightforward — try to write more fast, isolated tests and fewer slow, integrated tests:
 
-![](./0-RUqiEN6c-QcHPfvW.png)
+<figure>
+
+![](./test-pyramid.png)
+
+<figcaption>
 
 The basic test pyramid, from [https://martinfowler.com/articles/practical-test-pyramid.html](https://martinfowler.com/articles/practical-test-pyramid.html)
+
+</figcaption>
+</figure>
 
 Is this always the approach we should adopt, though? People have pointed out that the standard three-layer model isn’t appropriate for a lot of projects, and there are differing opinions on whether the middle layers [should be scrapped](https://github.com/testdouble/contributing-tests/wiki/Testing-Pyramid) or [brought back](https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid).
 
@@ -42,9 +49,12 @@ This generalizes more widely than TDD, though: At the smaller scales, most code 
 
 At larger scales, we might have some changes that simply can’t be tested in an automated fashion: we might have tests in place that check our understanding of the requirements, but we can’t be properly confident in some changes until a user has said it solves their problems. We’re always going to be crowd-sourcing at least some of our testing.
 
-![](./1-eCWnQUjXrV8hNJi2ch9s6Q.png)
+<figure>
 
-A pipeline showing a progression of less-risky to more-risky changes, and a corresponding confidence-generating activity for each. Of course, this isn’t a universal truth — everyone ends up with a different version of this diagram in their heads.
+![](./confidence-pipeline.png)
+
+<figcaption>A pipeline showing a progression of less-risky to more-risky changes, and a corresponding confidence-generating activity for each. Of course, this isn’t a universal truth — everyone ends up with a different version of this diagram in their heads.</figcaption>
+</figure>
 
 This process generalizes TDD in another way, too: the (functional change / covered by unit tests) step doesn’t have to be an explicit test framework. So long as we have a clear expectation in our head, we can test that against some console output or some UI appearance. The main thing we care about is getting that feedback quickly — if it takes five minutes to run our manual test each time, we almost certainly want to create some sort of shortcut to confidence, whether that’s [a UI test bench](https://medium.com/ingeniouslysimple/isolated-testing-for-ui-components-with-test-benches-b0d55d23a3d8) or some more standard tests.
 
@@ -65,7 +75,7 @@ So what conclusions can we draw from all of this?
 - We do need to be careful about misplaced confidence: [focusing too tightly](https://en.wikipedia.org/wiki/Inattentional_blindness) on low-level tests and potentially missing breakages that have happened at higher levels. Fortunately, we usually have some CI server that’ll run all the tests and double-check our changes.
 - In the end, you’ll need to figure out what your own testing pyramid should be — this may vary from team to team and product-to-product — and figure out how you’re going to generate confidence in the code you’re writing.
 
-![](./0-m6y6u5eIqUoqdeex.jpg)
+![](./notes.jpg)
 
 ---
 

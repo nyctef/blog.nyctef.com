@@ -22,7 +22,7 @@ With that all sorted out, let’s get started:
 
 An electron app is made up of two parts: a website, and a mini-browser which displays that website. Electron itself is built from the chromium code, and a node.js hosting process. The two sides are often called the “main” process and the “renderer” process. This process separation isn’t particularly helpful for us, but [it’s an important part of how Chrome works](https://www.google.com/googlebooks/chrome/big_04.html) so we’re stuck with it.
 
-![](./1-fGSxVGFTKK34BAHfeRih9Q.png)
+![](./main-vs-renderer.png)
 
 We’ll spend a bit of time setting up the window, but most of the work ends up happening in the actual website we want to display.
 
@@ -126,13 +126,13 @@ Now we can call `npm run build` and see how the files in `./src` get mapped int
 
 After all that effort, we come to the punchline:
 
-![](./1-WHu_uybE1SOtQBtvxgdx7A.png)
+![](./did-you-mean.png)
 
 D’oh!
 
 A quick fix later, and our electron app is finally running:
 
-![](./1-77rxHh_u_SBUZxwZRuKbaA.png)
+![](./example-dot-com.png)
 
 It’s alive! It’s not very impressive…
 
@@ -162,6 +162,6 @@ Now typescript will do a minimal recompile each time a file changes, which is mu
 
 We now have electron running, but it’s just showing a random page from the internet. [In the next part, we’ll look at building the actual application we want to display](https://medium.com/p/aaa625207c12).
 
-![](./1-VUBO-BRVT9YTJDmfOlJaTw.jpeg)
+![](./electron.jpeg)
 
 Photo by [Zoltan Tasi](https://unsplash.com/@zoltantasi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

@@ -6,7 +6,7 @@ date: 2019-10-30
 
 <i>2026 edit: unfortunately the repl.it embeds that this post were built around have died in the intervening years. The non-code parts are preserved, at least, but the code snippets will need recreating at some point</i>
 
-![](./1-UXCDHWTtxbmLavkjddIP0A.png)
+![](./code.png)
 
 Let’s take a toy problem, and use it to explore how the features available in different programming languages influence the way we write object-oriented code.
 

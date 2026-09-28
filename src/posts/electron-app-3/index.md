@@ -6,7 +6,7 @@ date: 2019-08-07
 
 In the previous part we started building the actual interactive part of the application with React. However, it didn’t look particularly impressive:
 
-![](./0-FJiWp62yUzp5LMlU.png)
+![](./hello-world-2.png)
 
 If we want to build a full application, we need a set of layout conventions and UI widgets to build with. While HTML5 itself gives us plenty of tools, a toolkit like [Semantic UI](https://semantic-ui.com/) can significantly accelerate the process of putting together a good-looking and usable UI.
 
@@ -138,7 +138,7 @@ const App = () => (
 
 Creating something that definitely looks better than what we started with:
 
-![](./1-UcUtMjWC2TDNMeeusGBDDg.png)
+![](./hello-world-buttons.png)
 
 ---
 
@@ -148,6 +148,6 @@ Instead, we’ll look at pulling in external code to implement core bits of appl
 
 Stay tuned for more on that in the next part!
 
-![](./1-VvuuvNCk3H5-jLBpV8BueQ.png)
+![](./electron.png)
 
 Photo by [Fractal Hassan](https://unsplash.com/photos/XoNj0ulsn1Y)
