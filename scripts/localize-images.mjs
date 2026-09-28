@@ -67,7 +67,7 @@ async function processPost(fileName) {
   const targetDir = path.join(postsDir, slug);
   console.log(`${fileName}: ${urls.length} image(s) -> ${slug}/index.md`);
   if (dryRun) {
-    for (const url of urls) console.log(`  ${url}`);
+    for (const url of urls) console.log(`  ${url} -> ${baseFileName(url)}`);
     return;
   }
 
