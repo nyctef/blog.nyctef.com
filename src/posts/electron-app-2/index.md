@@ -298,6 +298,6 @@ Hello world, indeed.
 
 In the next few parts we’ll look at adding styling, making our application more complex, and interacting with external capabilities to continue turning this into a real desktop application.
 
-![](./1-O3rFk-lChyT2wzIkZOeeaw.jpeg)
+![](./electron.jpeg)
 
 Photo by [Fractal Hassan](https://unsplash.com/photos/XoNj0ulsn1Y)
