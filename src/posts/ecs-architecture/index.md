@@ -38,15 +38,25 @@ Objects in OO tend to be connected by many indirect references
 
 So how do we go about fixing this problem? Fortunately, there’s a whole bunch of resources around programming for good memory access under the name of “[data-oriented design](http://gamesfromwithin.com/data-oriented-design)”. We’ll get back to implementing this further down the article, but the main idea is to arrange data in memory to maximize “[data locality](http://gameprogrammingpatterns.com/data-locality.html)” and to build code that uses large blocks of data all at once, rather than just operating on a single object at a time.
 
+<figure>
+
 ![](./hierarchy.png)
 
+<figcaption>
 Inheritance hierarchies can get deep and inflexible
+</figcaption>
+</figure>
 
 So how can OO be bad for maintenance? One particular failure state for OO is large inheritance hierarchies which [turn out to be inflexible](http://whats-in-a-game.com/implementation-inheritance-is-evil/) and react to change badly over time — because most systems don’t fit into nice strict hierarchies. For example, in the above (made up but fairly typical) example we have a main backbone of types Renderable / HasPhysics / Collidable / Controllable which provide basic functionality to other, more specialized types. The problem is that no matter what order we choose to arrange this backbone in, there will be some subtypes which don’t fit in well. For example, classes like ‘invisible wall’ or ‘story trigger’ don’t fit into the above hierarchy, because everything subclasses from Renderable. This often causes hacks and Liskov violations where subclasses provide lots of null implementations of bits of functionality they don’t actually need, and code tends to creep upwards into giant, fragile base classes.
 
+<figure>
+
 ![](./components.png)
 
+<figcaption>
 Using components, we can pick and choose bits of behavior for each object we want
+</figcaption>
+</figure>
 
 The solution to the second problem is to back off a bit from the OO tendency to model the problem domain in code, and look at modelling the solution instead: we’ll compose components instead of inheriting attributes. Each entity can mix and match components as necessary to build up the behavior required. In this version, often the components and necessary bits of data are paired together: each component by itself can still be a class with encapsulated data (but [doesn’t have to be](https://www.youtube.com/watch?v=6vmRwLYWNRo)).
 
@@ -54,17 +64,28 @@ Unity and Unreal are examples of popular game engines with an EC (entity-compone
 
 In some EC architectures, all entities share some common bits of data such as transform information such as position, rotation and scale, or some basic state data about whether the entity is currently “alive” in the scene. [Unity GameObjects](https://docs.unity3d.com/ScriptReference/GameObject.html) are one example of this style. In other versions of the pattern, all possible bits of data are pulled out into components and the entity ends up functionally just being a container for the components.
 
+<figure>
+
 ![](./entity-as-pointer.png)
 
+<figcaption>
 Once we remove any actual responsibilities from the entity/game object itself, we can replace it with a single numeric ID
+</figcaption>
+</figure>
 
 Splitting all of our objects into sets of components leads to a solution to the first problem and a way we can implement data-oriented design: we can rearrange the data [from an array-of-structures to a struct-of-arrays](https://en.wikipedia.org/wiki/AOS_and_SOA).
 
 To do this, we also need to separate out the behavior and data for each component. Our components are now pure-data structs, and bits of behavior that operate on one (or more) components at a type are called “[systems](https://gamedev.stackexchange.com/a/31491/114877).”
 
+<figure>
+
 ![](./systems.png)
 
+<figcaption>
 Some components (like Position) are shared between systems. Other components can be private to a particular system, which allows for information hiding and greater optimization in memory layouts.
+</figcaption>
+</figure>
+
 
 For example, let’s say that one scene in the game contains a thousand entities. Almost all of these entities contain a position, so we could just allocate a large 1000-element array for our position components, and store the position for each entity indexed by its entity ID. Since the array is almost completely populated, and we’ll want to reference entity positions on a regular basis, this is probably the most efficient way to store this information.
 
